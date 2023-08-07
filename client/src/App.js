@@ -1,9 +1,10 @@
 import "./App.css";
-
+import React from "react";
+import Registration from "./components/Registration";
 function App() {
   return (
     <div>
-      <h1>Hello</h1>
+      <Registration />
     </div>
   );
 }
