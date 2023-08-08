@@ -26,34 +26,34 @@ export default function Registration() {
   };
   return (
     <div>
-      <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
+      <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-[#F3F4ED]">
         <div>
           <a href="/">
-            <h3 className="text-4xl font-bold text-black-600">REGISTER</h3>
+            <h3 className="text-4xl font-bold tracking-wide text-[#424642]">REGISTER</h3>
           </a>
         </div>
-        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-lg">
+        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white min-h-[380px] min-w-[450px] shadow-md sm:max-w-md sm:rounded-lg">
           <form onSubmit={handleSubmit}>
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 undefined"
+                className="block text-sm font-medium text-[#536162] mt-12 undefined"
               >
                 Name
               </label>
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start ">
                 <input
                   type="text"
                   name="username"
                   onChange={handleChange}
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full mt-1 border-b-2 border-[#C06014] rounded-sm shadow-sm focus:border-[#F3F4ED] focus:ring focus:ring-[#F3F4ED] focus:ring-opacity-50"
                 />
               </div>
             </div>
             <div className="mt-4">
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 undefined"
+                className="block text-sm font-medium text-[#536162] undefined"
               >
                 Email
               </label>
@@ -62,14 +62,14 @@ export default function Registration() {
                   type="email"
                   name="email"
                   onChange={handleChange}
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full mt-1 border-b-2 border-[#C06014] rounded-sm shadow-sm focus:border-[#F3F4ED] focus:ring focus:ring-[#F3F4ED] focus:ring-opacity-50"
                 />
               </div>
             </div>
             <div className="mt-4">
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700 undefined"
+                className="block text-sm font-medium text-[#536162] undefined"
               >
                 Password
               </label>
@@ -78,20 +78,20 @@ export default function Registration() {
                   type="password"
                   name="password"
                   onChange={handleChange}
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  className="block w-full mt-1 border-b-2 border-[#C06014] rounded-sm shadow-sm focus:border-[#F3F4ED] focus:ring focus:ring-[#F3F4ED] focus:ring-opacity-50"
                 />
               </div>
             </div>
-            <div className="flex items-center justify-end mt-4">
+            <div className="flex items-center justify-center mt-12">
               <Link
-                className="text-sm text-gray-600 underline hover:text-gray-900"
+                className="text-sm text-[#536162] underline hover:text-[#C06014]"
                 to="/login"
               >
                 Already registered?
               </Link>
               <button
                 type="submit"
-                className="inline-flex items-center px-4 py-2 ml-4 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-gray-900 border border-transparent rounded-md active:bg-gray-900 false"
+                className="inline-flex items-center px-4 py-2 ml-4 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-[#424642] border border-transparent rounded-md active:bg-[#C06014] false"
               >
                 Submit
               </button>
