@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import axios from "axios";
 export default function Registration() {
   const [formData, setFormData] = useState({
-    username: "",
     email: "",
     password: "",
   });
@@ -14,7 +13,6 @@ export default function Registration() {
   };
 
   const formDataObject = new FormData();
-  formDataObject.append("username", formData.username);
   formDataObject.append("email", formData.email);
   formDataObject.append("password", formData.password);
 
@@ -29,27 +27,11 @@ export default function Registration() {
       <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
         <div>
           <a href="/">
-            <h3 className="text-4xl font-bold text-black-600">REGISTER</h3>
+            <h3 className="text-4xl font-bold text-black-600">LOGIN</h3>
           </a>
         </div>
         <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-lg">
           <form onSubmit={handleSubmit}>
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-700 undefined"
-              >
-                Name
-              </label>
-              <div className="flex flex-col items-start">
-                <input
-                  type="text"
-                  name="username"
-                  onChange={handleChange}
-                  className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                />
-              </div>
-            </div>
             <div className="mt-4">
               <label
                 htmlFor="email"
@@ -85,9 +67,9 @@ export default function Registration() {
             <div className="flex items-center justify-end mt-4">
               <Link
                 className="text-sm text-gray-600 underline hover:text-gray-900"
-                to="/login"
+                to="/register"
               >
-                Already registered?
+                Not registered?
               </Link>
               <button
                 type="submit"
