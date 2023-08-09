@@ -52,7 +52,7 @@ const navigate = useNavigate();
               </button>
               <button onClick={signUpPage} className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full">
                 Sign Up
-              </Link>
+              </button>
             </div>
           </div>
         </div>
