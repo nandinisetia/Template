@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Nav from "./Nav";
 export default function Registration() {
   const [formData, setFormData] = useState({
     username: "",
@@ -26,6 +27,7 @@ export default function Registration() {
   };
   return (
     <div>
+      <Nav />
       <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-[#F3F4ED]">
         <div>
           <a href="/">

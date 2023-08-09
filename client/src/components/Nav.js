@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import React, { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,12 +39,18 @@ export default function Nav() {
               </button>
             </div>
             <div className="hidden md:flex space-x-4">
-              <button className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full">
+              <Link
+                className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full"
+                to="/login"
+              >
                 Login
-              </button>
-              <button className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full">
+              </Link>
+              <Link
+                className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full"
+                to="/register"
+              >
                 Sign Up
-              </button>
+              </Link>
             </div>
           </div>
         </div>
