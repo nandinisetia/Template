@@ -1,2 +1,3 @@
-# https://colorhunt.co/palette/3c42455f6769719192dfcdc3
-# https://colorhunt.co/palette/f3f4ed536162424642c06014
+- https://colorhunt.co/palette/3c42455f6769719192dfcdc3 - colour scheme 1
+- https://colorhunt.co/palette/f3f4ed536162424642c06014 - colour scheme 2
+- https://www.telerik.com/blogs/data-visualization-build-react-graphs-easy-way - graphs
