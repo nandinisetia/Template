@@ -22,7 +22,7 @@ export default function Services() {
 
   return (
     <section className="py-10">
-      <h1 className="text-4xl font-bold text-[#3C4245] font-sans from-neutral-500 text-center">OUR COURSES</h1>
+      <h1 className="text-4xl font-bold text-[#424642] font-sans from-neutral-500 text-center">OUR COURSES</h1>
       <div className="container mx-auto px-10 py-6 flex flex-col items-center">
         {cards.map((card, index) => (
           <div
