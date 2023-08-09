@@ -19,7 +19,7 @@ const navigate = useNavigate();
 
   return (
     <div>
-      <nav className="fixed top-0 left-0 right-0 bg-[#536162] pt-4 pb-4 z-10">
+      <nav className="fixed top-0 left-0 right-0 bg-[#536162] p-4 pb-4 z-10">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <a href="/" className="text-white font-bold text-lg">
@@ -47,7 +47,7 @@ const navigate = useNavigate();
               </button>
             </div>
             <div className="hidden md:flex space-x-4">
-              <button onClick={loginPage} className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full">
+              <button onClick={loginPage} className="bg-[#424642] text-white hover:bg-[#C06014] px-4  py-2 rounded-full">
                 Login
               </button>
               <button onClick={signUpPage} className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full">
