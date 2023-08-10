@@ -42,7 +42,7 @@ export default function SideBar() {
               !open && 'scale-0'
             }`}
           >
-            TekMoney
+            Finesse360
           </h1>
         </div>
         <ul className="pt-6">

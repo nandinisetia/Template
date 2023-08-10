@@ -34,7 +34,7 @@ export default function Nav() {
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <a href="/" className="text-white font-bold text-lg">
-              TekMoney
+              Finesse360
             </a>
           </div>
           <div className="hidden md:flex ">
@@ -44,9 +44,25 @@ export default function Nav() {
             <a href="/" className="text-white mx-4">
               Articles
             </a>
-            <a href="/" className="text-white mx-4">
+            <div className="text-white mx-4">
               Calculators
-            </a>
+              <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+      </li>
+      <li>
+        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+      </li>
+    </ul>
+</div>
+            </div>
             <a href="/" className="text-white mx-4">
               About
             </a>
@@ -57,7 +73,7 @@ export default function Nav() {
                 <GiHamburgerMenu className="text-white text-2xl" />
               </button>
             </div>
-            {!storedData.flag?<div className="hidden md:flex space-x-4">
+            {/* {!storedData.flag?<div className="hidden md:flex space-x-4">
               <button
                 onClick={loginPage}
                 className="bg-[#424642] text-white hover:bg-[#C06014] px-4  py-2 rounded-full"
@@ -75,7 +91,7 @@ export default function Nav() {
                 className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full"
               >
                 Logout
-              </button>}
+              </button>} */}
         
           </div>
         </div>
@@ -94,7 +110,7 @@ export default function Nav() {
               About
             </a>
 
-            {!storedData.flag?<div className="hidden md:flex space-x-4">
+            {/* {!storedData.flag?<div className="hidden md:flex space-x-4">
               <button
                 onClick={loginPage}
                 className="bg-[#424642] text-white hover:bg-[#C06014] px-4  py-2 rounded-full"
@@ -112,7 +128,7 @@ export default function Nav() {
                 className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full"
               >
                 Logout
-              </button>}
+              </button>} */}
           </div>
         )}
       </nav>
