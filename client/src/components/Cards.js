@@ -41,7 +41,7 @@ export default function Services() {
             </div>
             <div className="bg-[#F3F4ED] p-4">
               <h3 className="text-[#C06014] text-xl font-extrabold text-left">{card.title}</h3>
-              <p className="text-[#5F6769]">{card.description}</p>
+              <p className="text-[#5F6769] text-justify">{card.description}</p>
             </div>
           </div>
         ))}

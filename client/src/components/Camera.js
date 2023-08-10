@@ -4,8 +4,9 @@ function CameraApp({ setImageURL }) {
   const [stream, setStream] = useState(null);
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
-
+  const [open, setOpen] = useState(false);
   const startCamera = async () => {
+    setOpen(true);
     const stream = await navigator.mediaDevices.getUserMedia({
       video: true,
       audio: false,
@@ -32,10 +33,16 @@ function CameraApp({ setImageURL }) {
       <button id="start-camera" onClick={startCamera}>
         Start Camera
       </button>
-      <video id="video" ref={videoRef} autoPlay muted />
-      <button id="click-photo" onClick={takePhoto}>
-        Take Photo
-      </button>
+      <br></br>
+      {open ? (
+        <div>
+          <video id="video" ref={videoRef} autoPlay muted />
+          <button id="click-photo" onClick={takePhoto}>
+            Take Photo
+          </button>
+        </div>
+      ) : null}
+
       <canvas id="canvas" ref={canvasRef} style={{ display: "none" }} />
     </div>
   );
