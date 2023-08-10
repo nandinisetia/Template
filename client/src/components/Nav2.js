@@ -10,7 +10,7 @@ export default function Nav2() {
   };
   return (
     <div>
-      <nav className="fixed top-0 left-0 right-0 bg-[#536162] p-4 pb-4 z-10">
+      <nav className="fixed top-0 left-0 right-0 bg-[#536162] p-4 pb-4 z-10 mb-3">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center">
             <a href="/" className="text-white font-bold text-lg">
