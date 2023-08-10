@@ -7,7 +7,9 @@ import Dashboard from "./components/Dashboard";
 import Courses from "./components/Course";
 import Portfolio from "./components/Portfolio";
 import Profile from "./components/Profile";
-import SIP from "./components/calculators/MF";
+import SIP from "./components/calculators/SIP";
+import MF from "./components/calculators/MF";
+import PPF from "./components/calculators/PPF";
 function App() {
   return (
     <>
@@ -21,6 +23,8 @@ function App() {
           <Route path="/dashboard/portfolio" element={<Portfolio/>} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/sip" element={<SIP />} />
+          <Route path="/mf" element={<MF />} />
+          <Route path="/ppf" element={<PPF />} />
         </Routes>
       </div>
     </>
