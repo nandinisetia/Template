@@ -1,7 +1,8 @@
 import React from "react";
 
 export default function Progress({}) {
-  let count = 80;
+  const storedData = JSON.parse(localStorage.getItem("userData"));
+  let count = storedData.progress;
   return (
     <>
       <div className="progressBar mt-5">
