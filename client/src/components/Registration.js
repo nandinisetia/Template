@@ -92,6 +92,7 @@ export default function Registration() {
 
             <div>
               <Camera setImageURL={setImageURL} />
+              {imageURL && <img src={imageURL} alt="Taken" />}
             </div>
             <div className="flex items-center justify-end mt-12">
               <Link

@@ -28,7 +28,7 @@ export default function Login() {
   };
   return (
     <div>
-      <Nav2/>
+      <Nav2 />
       <div className="flex flex-col items-center min-h-screen pt-6 justify-center sm:pt-0 bg-[#F3F4ED]">
         <div>
           <a href="/">
@@ -77,9 +77,9 @@ export default function Login() {
             <div className="flex items-center justify-end mt-12">
               <Link
                 className="text-sm text-[#536162] underline hover:text-[#C06014]"
-                to="/login"
+                to="/register"
               >
-                Already registered?
+                Not registered?
               </Link>
               <button
                 type="submit"
