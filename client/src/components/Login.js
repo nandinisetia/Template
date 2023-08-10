@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Nav2 from "./Nav2";
 import axios from "axios";
 export default function Registration() {
   const [formData, setFormData] = useState({
@@ -24,13 +25,16 @@ export default function Registration() {
   };
   return (
     <div>
-      <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-[#F3F4ED]">
+      <Nav2/>
+      <div className="flex flex-col items-center min-h-screen pt-6 justify-center sm:pt-0 bg-[#F3F4ED]">
         <div>
           <a href="/">
-          <h3 className="text-4xl font-bold tracking-wide text-[#424642]">LOGIN</h3>
+            <h3 className="text-4xl font-bold tracking-wide text-[#424642]">
+              LOGIN
+            </h3>
           </a>
         </div>
-        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md sm:rounded-lg">
+        <div className="w-10/12 px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-md rounded-lg">
           <form onSubmit={handleSubmit}>
             <div className="mt-4">
               <label
