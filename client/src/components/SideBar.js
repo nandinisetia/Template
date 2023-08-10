@@ -13,6 +13,7 @@ export default function SideBar() {
     { title: 'Dashboard', src: Dashboard1, link: '/dashboard' },
     { title: 'View Courses', src: Learning, gap: false, link: '/dashboard/courses' },
     { title: 'View Portfolio', src: Portfolio, gap: false, link: '/dashboard/portfolio' },
+    { title: 'Leaderboard', src: Learning, gap: false, link: '/dashboard/leaderboard' },
   ];
 
   return (
