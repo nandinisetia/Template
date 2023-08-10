@@ -11,8 +11,9 @@ export default function SideBar() {
   const [open, setOpen] = useState(true);
   const Menus = [
     { title: 'Dashboard', src: Dashboard1, link: '/dashboard' },
-    { title: 'View Courses', src: Learning, gap: true, link: '/dashboard/courses' },
+    { title: 'View Courses', src: Learning, gap: false, link: '/dashboard/courses' },
     { title: 'View Portfolio', src: Portfolio, gap: false, link: '/dashboard/portfolio' },
+    { title: 'Leaderboard', src: Learning, gap: false, link: '/dashboard/leaderboard' },
   ];
 
   return (

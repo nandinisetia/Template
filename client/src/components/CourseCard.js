@@ -3,15 +3,15 @@ import React from 'react';
 export default function CourseCard() {
   const courses = [
     {
-      title: 'Lorem ipsum dolor',
+      title: 'Beginner',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque fermentum commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id nisi fringilla sapien dignissim faucibus sit amet et nulla. Etiam ut fermentum odio. Integer non mauris mauris. Cras lacinia a nulla in tincidunt. Etiam quis maximus dolor.',
     },
     {
-      title: 'Lorem ipsum dolor ',
+      title: 'Intermediate',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque fermentum commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id nisi fringilla sapien dignissim faucibus sit amet et nulla. Etiam ut fermentum odio. Integer non mauris mauris. Cras lacinia a nulla in tincidunt. Etiam quis maximus dolor.',
     },
     {
-      title: 'Lorem ipsum dolor ',
+      title: 'Advance',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque fermentum commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id nisi fringilla sapien dignissim faucibus sit amet et nulla. Etiam ut fermentum odio. Integer non mauris mauris. Cras lacinia a nulla in tincidunt. Etiam quis maximus dolor.',
     },
     // Add more courses here
