@@ -17,34 +17,54 @@ function MF() {
   return (
     <>
       <Nav />
-      <div className="flex flex-col pt-20 items-center justify-center section">
-        <h1>Mutual Funds Calculator</h1>
-        <div>
-          <label>Principal Amount:</label>
-          <input
-            type="number"
-            value={principal}
-            onChange={(e) => setPrincipal(e.target.value)}
-          />
+      <div className="flex justify-center items-center h-screen">
+        <div className="bg-white p-6 rounded-lg shadow-md w-96">
+          <h1 className="text-2xl font-bold mb-4 text-center">
+            Mutual Funds Calculator
+          </h1>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2">
+              Principal Amount:
+            </label>
+            <input
+              className="px-3 py-2 border rounded-md w-full"
+              type="number"
+              value={principal}
+              onChange={(e) => setPrincipal(e.target.value)}
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2">
+              Annual Growth Rate (%):
+            </label>
+            <input
+              className="px-3 py-2 border rounded-md w-full"
+              type="number"
+              value={rate}
+              onChange={(e) => setRate(e.target.value)}
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2">
+              Investment Period (years):
+            </label>
+            <input
+              className="px-3 py-2 border rounded-md w-full"
+              type="number"
+              value={time}
+              onChange={(e) => setTime(e.target.value)}
+            />
+          </div>
+          <button
+            className="bg-blue-500 text-white px-4 py-2 rounded-md w-full hover:bg-blue-600"
+            onClick={calculateMutualFunds}
+          >
+            Calculate
+          </button>
+          {result && (
+            <div className="mt-4 text-center">Future Value: {result}</div>
+          )}
         </div>
-        <div>
-          <label>Annual Growth Rate (%):</label>
-          <input
-            type="number"
-            value={rate}
-            onChange={(e) => setRate(e.target.value)}
-          />
-        </div>
-        <div>
-          <label>Investment Period (years):</label>
-          <input
-            type="number"
-            value={time}
-            onChange={(e) => setTime(e.target.value)}
-          />
-        </div>
-        <button onClick={calculateMutualFunds}>Calculate</button>
-        {result && <div>Future Value: {result}</div>}
       </div>
     </>
   );
