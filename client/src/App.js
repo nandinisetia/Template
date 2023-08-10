@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Registration from "./components/Registration";
 import Login from "./components/Login";
 import Landing from "./components/Landing";
+import Quiz from "./components/Quiz";
 import Dashboard from "./components/Dashboard";
 import Courses from "./components/Course";
 import Portfolio from "./components/Portfolio";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/quiz" element={<Quiz/>}/>
           <Route path="/dashboard" element={<Dashboard/>} />
           <Route path="/dashboard/courses" element={<Courses/>} />
           <Route path="/dashboard/portfolio" element={<Portfolio/>} />

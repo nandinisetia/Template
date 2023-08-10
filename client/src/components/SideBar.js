@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LeftArrow from '../assets/previous.png';
-// import Logo from '../assets/logo.png';
+import Logo from '../assets/logo.png';
 import Learning from '../assets/learning.png';
 import Dashboard1 from '../assets/dashboard.png';
 import Portfolio from '../assets/portfolio.png';
@@ -30,13 +30,13 @@ export default function SideBar() {
           onClick={() => setOpen(!open)}
         />
         <div className="flex gap-x-4 items-center">
-          {/* <img
+          <img
             src={Logo}
             alt="MT"
             className={`cursor-pointer duration-500 h-10 w-10 ${
               open && 'rotate-[360deg]'
             }`}
-          /> */}
+          />
           <h1
             className={`text-white origin-left font-medium text-xl duration-200 ${
               !open && 'scale-0'
