@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const storedData = JSON.parse(localStorage.getItem("userData"));
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
@@ -16,7 +16,18 @@ export default function Nav() {
   const signUpPage = () => {
     navigate("/register");
   };
-
+  const LogoutPage = () => {
+    axios
+    .post("http://127.0.0.1:8000/api/logout/", {
+      "email":storedData.email,
+    })
+    .then((response) => {
+      console.log(response);
+      localStorage.setItem("userData", JSON.stringify(response.data.message));
+    })
+    navigate("/")
+  };
+  
   return (
     <div>
       <nav className="fixed top-0 left-0 right-0 bg-[#536162] p-4 pb-4 z-10 mb-3">
@@ -46,7 +57,7 @@ export default function Nav() {
                 <GiHamburgerMenu className="text-white text-2xl" />
               </button>
             </div>
-            <div className="hidden md:flex space-x-4">
+            {!storedData.flag?<div className="hidden md:flex space-x-4">
               <button
                 onClick={loginPage}
                 className="bg-[#424642] text-white hover:bg-[#C06014] px-4  py-2 rounded-full"
@@ -59,7 +70,13 @@ export default function Nav() {
               >
                 Sign Up
               </button>
-            </div>
+            </div>:     <button
+                onClick={LogoutPage}
+                className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full"
+              >
+                Logout
+              </button>}
+        
           </div>
         </div>
         {isOpen && (
@@ -77,20 +94,25 @@ export default function Nav() {
               About
             </a>
 
-            <div className="flex flex-col justify-left mt-4">
+            {!storedData.flag?<div className="hidden md:flex space-x-4">
               <button
                 onClick={loginPage}
-                className="bg-[#424642] text-white hover:bg-[#C06014] pl-4 py-2 rounded-full"
+                className="bg-[#424642] text-white hover:bg-[#C06014] px-4  py-2 rounded-full"
               >
                 Login
               </button>
               <button
                 onClick={signUpPage}
-                className="bg-[#424642] text-white hover:bg-[#C06014] pl-4 py-2 rounded-full mt-2"
+                className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full"
               >
                 Sign Up
               </button>
-            </div>
+            </div>:     <button
+                onClick={LogoutPage}
+                className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full"
+              >
+                Logout
+              </button>}
           </div>
         )}
       </nav>

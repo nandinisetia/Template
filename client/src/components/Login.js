@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import Nav2 from "./Nav2";
 import axios from "axios";
 import Camera from "./Camera";
@@ -9,7 +9,7 @@ export default function Login() {
     email: "",
     password: "",
   });
-
+  const navigate = useNavigate();
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
@@ -22,12 +22,17 @@ export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:3001/submitForm", {
-        formData,
-        imageURL,
+      .post("http://127.0.0.1:8000/api/alldata/", {
+        "email":formData.email,
+        "password":formData.password
       })
       .then((response) => {
+        console.log(response.data.message)
         localStorage.setItem("userData", JSON.stringify(response.data.message));
+        navigate("/profile");
+      })
+      .catch((error)=>{
+        alert("Username or Password is invalid");
       });
   };
   return (
