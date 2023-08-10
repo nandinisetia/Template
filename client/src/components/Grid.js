@@ -42,14 +42,16 @@ export default function Services() {
             <div className="w-full bg-[#F3F4ED] p-4 flex flex-col justify-center">
               {/* Text content */}
               <h3 className="text-[#C06014] text-xl font-extrabold text-center md:text-left">{card.title}</h3>
-              <p className="text-[#5F6769] text-center md:text-left">{card.description}</p>
+              <p className="text-[#5F6769] text-justify md:text-left">{card.description}</p>
 
               {/* Image (shown on small screens) */}
               <div className="mt-4 md:hidden">
                 <img
                   className="w-full h-full object-cover"
                   src={card.imageUrl}
-                  alt={card.title}
+                  alt={card.title} 
+
+                  
                 />
               </div>
             </div>
