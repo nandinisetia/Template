@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Nav from "./Nav";
+import Nav2 from "./Nav2";
+import Camera from "./Camera";
 export default function Registration() {
   const [imageURL, setImageURL] = useState("");
   const [formData, setFormData] = useState({
