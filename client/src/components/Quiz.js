@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { createContext, useContext, useState } from 'react';
 import {quiz} from '../data/quiz.js'
-import { useState } from 'react'
-import '../styles/quiz.css'
+import '../cssFiles/quiz.css'
+import { useNavigate } from 'react-router-dom';
+const ScoreContext = createContext();
+
 
 export default function Quiz() {
+    const navigate = useNavigate();
+    const charts = () => {
+        navigate("/dashboard");
+      };
     const [activeQuestion, setActiveQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState('')
   const [Topic,setTopic]=useState(0);
