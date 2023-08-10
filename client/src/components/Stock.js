@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Equity from "../assets/equity.csv";
 import Papa from 'papaparse';
 
 export default function Stock() {
@@ -12,9 +13,9 @@ export default function Stock() {
   const [stockName, setStockName] = useState('');
 
   useEffect(() => {
-    Papa.parse('/Template/client/src/assets/equity.csv', {
+    Papa.parse(Equity, {
       download: true,
-      header: true, // Indicate that the first row is headers
+      header: true,
       complete: function (result) {
         setStockData(result.data);
       },
@@ -55,11 +56,11 @@ export default function Stock() {
 
   return (
     <div className="p-8">
-      <div className="mb-4">
-        <p className="text-xl font-bold mb-2">Invested Money: {investedMoney}</p>
-        <p className="text-xl font-bold mb-2">Current Money: {currentMoney}</p>
+      <div className="mb-4 space-x-4 flex items-center">
+        <p className="text-xl text-[#536162] font-bold">Invested Money: {investedMoney}</p>
+        <p className="text-xl text-[#536162] font-bold">Current Money: {currentMoney}</p>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+          className="bg-[#424642] text-white px-4 py-2 rounded hover:bg-[#C06014]"
           onClick={() => setIsFormOpen(true)}
         >
           Add Stock
@@ -74,7 +75,7 @@ export default function Stock() {
               onChange={handleStockCodeChange}
               className="p-2 border rounded w-full"
             >
-              <option value="">Select Stock Code</option>
+              <option value="" >Select Stock Code</option>
               {stockData.map((stock, index) => (
                 <option key={index} value={stock.SYMBOL}>
                   {stock.SYMBOL}
@@ -97,7 +98,7 @@ export default function Stock() {
             />
             <button
               type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="bg-[#424642] text-white px-4 py-2 rounded hover:bg-[#C06014]"
             >
               Submit
             </button>
@@ -105,19 +106,19 @@ export default function Stock() {
         </div>
       )}
 
-      <table className="mt-4 w-full border">
+      <table className="mt-4 w-full border ">
         <thead>
-          <tr>
-            <th className="px-4 py-2">Stock Code</th>
-            <th className="px-4 py-2">Stock Name</th>
-            <th className="px-4 py-2">Stock Quantity</th>
-            <th className="px-4 py-2">Stock Average</th>
-            <th className="px-4 py-2">Stock LTC</th>
+          <tr className='bg-[#424642]'>
+            <th className="text-white px-4 py-2">Stock Code</th>
+            <th className="text-white px-4 py-2">Stock Name</th>
+            <th className="text-white px-4 py-2">Stock Quantity</th>
+            <th className="text-white px-4 py-2">Stock Average</th>
+            <th className="text-white px-4 py-2">Stock LTC</th>
           </tr>
         </thead>
         <tbody>
           {stocks.map((stock, index) => (
-            <tr key={index}>
+            <tr key={index} className={index % 2 === 0 ? 'bg-gray-100' : ''}>
               <td className="px-4 py-2">{stock.stockCode}</td>
               <td className="px-4 py-2">{stock.stockName}</td>
               <td className="px-4 py-2">{stock.stockQuantity}</td>
