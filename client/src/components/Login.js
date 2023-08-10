@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Nav2 from "./Nav2";
 import axios from "axios";
-export default function Registration() {
+import Camera from "./Camera";
+export default function Login() {
+  const [imageURL, setImageURL] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -21,11 +23,12 @@ export default function Registration() {
     event.preventDefault();
     axios.post("http://localhost:3001/submitForm", {
       formData,
+      imageURL,
     });
   };
   return (
     <div>
-      <Nav2/>
+      <Nav2 />
       <div className="flex flex-col items-center min-h-screen pt-6 justify-center sm:pt-0 bg-[#F3F4ED]">
         <div>
           <a href="/">
@@ -68,7 +71,10 @@ export default function Registration() {
                 />
               </div>
             </div>
-            <div className="flex items-center justify-end mt-4">
+            <div>
+              <Camera setImageURL={setImageURL} />
+            </div>
+            <div className="flex items-center justify-end mt-12">
               <Link
                 className="text-sm text-[#536162] underline hover:text-[#C06014]"
                 to="/register"
