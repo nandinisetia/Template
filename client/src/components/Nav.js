@@ -57,7 +57,7 @@ export default function Nav() {
                 <GiHamburgerMenu className="text-white text-2xl" />
               </button>
             </div>
-            {!storedData.flag?<div className="hidden md:flex space-x-4">
+            {/* {!storedData.flag?<div className="hidden md:flex space-x-4">
               <button
                 onClick={loginPage}
                 className="bg-[#424642] text-white hover:bg-[#C06014] px-4  py-2 rounded-full"
@@ -75,7 +75,7 @@ export default function Nav() {
                 className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full"
               >
                 Logout
-              </button>}
+              </button>} */}
         
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function Nav() {
               About
             </a>
 
-            {!storedData.flag?<div className="hidden md:flex space-x-4">
+            {/* {!storedData.flag?<div className="hidden md:flex space-x-4">
               <button
                 onClick={loginPage}
                 className="bg-[#424642] text-white hover:bg-[#C06014] px-4  py-2 rounded-full"
@@ -112,7 +112,7 @@ export default function Nav() {
                 className="bg-[#424642] text-white hover:bg-[#C06014] px-4 py-2 rounded-full"
               >
                 Logout
-              </button>}
+              </button>} */}
           </div>
         )}
       </nav>
