@@ -11,7 +11,6 @@ export default function Course() {
         <Stock/>
       </div>
     </div>
-
     </div>
   )
 }
