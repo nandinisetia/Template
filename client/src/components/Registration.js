@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Nav from "./Nav";
+import Camera from "./Camera";
 export default function Registration() {
+  const [imageURL, setImageURL] = useState("");
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -18,11 +20,12 @@ export default function Registration() {
   formDataObject.append("username", formData.username);
   formDataObject.append("email", formData.email);
   formDataObject.append("password", formData.password);
-
+  // formDataObject.append("image", imageURL);
   const handleSubmit = (event) => {
     event.preventDefault();
     axios.post("http://localhost:3001/submitForm", {
       formData,
+      imageURL,
     });
   };
   return (
@@ -85,6 +88,10 @@ export default function Registration() {
                   className="block w-full mt-1 border-b-2 border-[#C06014] rounded-sm shadow-sm focus:border-[#F3F4ED] focus:ring focus:ring-[#F3F4ED] focus:ring-opacity-50"
                 />
               </div>
+            </div>
+
+            <div>
+              <Camera setImageURL={setImageURL} />
             </div>
             <div className="flex items-center justify-end mt-12">
               <Link

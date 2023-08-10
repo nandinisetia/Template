@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Nav from "./Nav";
 import axios from "axios";
-export default function Registration() {
+import Camera from "./Camera";
+export default function Login() {
+  const [imageURL, setImageURL] = useState("");
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -21,6 +23,7 @@ export default function Registration() {
     event.preventDefault();
     axios.post("http://localhost:3001/submitForm", {
       formData,
+      imageURL,
     });
   };
   return (
@@ -68,12 +71,15 @@ export default function Registration() {
                 />
               </div>
             </div>
-            <div className="flex items-center justify-end mt-4">
+            <div>
+              <Camera setImageURL={setImageURL} />
+            </div>
+            <div className="flex items-center justify-end mt-12">
               <Link
                 className="text-sm text-[#536162] underline hover:text-[#C06014]"
-                to="/register"
+                to="/login"
               >
-                Not registered?
+                Already registered?
               </Link>
               <button
                 type="submit"
