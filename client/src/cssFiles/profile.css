@@ -1,0 +1,15 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+.progressBar {
+  margin: 0 3% 0 3%;
+}
+.profileBg {
+  background-color: #f3f4ed;
+}
+.section {
+  margin-top: 5%;
+}

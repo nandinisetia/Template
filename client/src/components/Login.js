@@ -21,10 +21,14 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:3001/submitForm", {
-      formData,
-      imageURL,
-    });
+    axios
+      .post("http://localhost:3001/submitForm", {
+        formData,
+        imageURL,
+      })
+      .then((response) => {
+        localStorage.setItem("userData", JSON.stringify(response.data.message));
+      });
   };
   return (
     <div>
