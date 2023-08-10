@@ -4,6 +4,7 @@ import Registration from "./components/Registration";
 import Login from "./components/Login";
 import Landing from "./components/Landing";
 import Profile from "./components/Profile";
+import SIP from "./components/calculators/MF";
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
           <Route path="/register" element={<Registration />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/sip" element={<SIP />} />
         </Routes>
       </div>
     </>
