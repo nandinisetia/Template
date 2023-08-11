@@ -12,6 +12,8 @@ import Bar from "./components/Bar"
 import SIP from "./components/calculators/SIP";
 import MF from "./components/calculators/MF";
 import PPF from "./components/calculators/PPF";
+import Article from "./components/Articles";
+import About from "./components/Offer";
 function App() {
   return (
     <>
@@ -29,6 +31,8 @@ function App() {
           <Route path="/sip" element={<SIP />} />
           <Route path="/mf" element={<MF />} />
           <Route path="/ppf" element={<PPF />} />
+          <Route path="/article" element={<Article/>}/>
+          <Route path="/about" element={<About/>}/>
         </Routes>
       </div>
     </>

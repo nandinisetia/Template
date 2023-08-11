@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Link } from 'react-scroll';
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const storedData = JSON.parse(localStorage.getItem("userData"));
@@ -46,9 +45,9 @@ export default function Nav() {
             <a href="/" className="text-white mx-4">
               Home
             </a>
-            <Link to='Articles' className="text-white mx-4">
+            <a href='/article' className="text-white mx-4">
               Articles
-            </Link>
+            </a>
             <div className="relative text-white mx-4">
             <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" onClick={toggleDropdown} class="flex items-center w-full rounded  focus:text-white hover:bg-transparent">Calculators <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -71,9 +70,9 @@ export default function Nav() {
     </ul>
 </div>
 </div>
-            <Link to="offer" className="text-white mx-4">
+            <a href="/about" className="text-white mx-4">
               About
-            </Link>
+            </a>
           </div>
           <div className="flex items-center">
             <div className="md:hidden">
