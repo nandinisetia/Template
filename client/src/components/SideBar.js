@@ -20,7 +20,7 @@ export default function SideBar() {
     
       <div
         className={` ${
-          open ? 'w-60' : 'w-20 '
+          open ? 'w-60' : 'w-[30px] '
         } bg-[#536162] h-screen p-5  pt-8 relative duration-300`}
       >
         <img
@@ -35,7 +35,7 @@ export default function SideBar() {
             src={Logo}
             alt="MT"
             className={`cursor-pointer duration-500 h-10 w-10 ${
-              open && 'rotate-[360deg]'
+              open && 'rotate-[360deg] ' 
             }`}
           />
           <h1
@@ -46,7 +46,7 @@ export default function SideBar() {
             Finesse360
           </h1>
         </div>
-        <ul className="pt-6">
+        <ul className={`pt-6 ${!open && 'w-10' }`}>
           {Menus.map((Menu, index) => (
             <li
               key={index}
@@ -56,7 +56,9 @@ export default function SideBar() {
               } `}
             >
               <Link to={Menu.link} className="flex items-center">
-                <img src={Menu.src} className="w-5 mr-2" alt="" />
+                <img src={Menu.src} className={`w-5 mr-2 ${
+              !open && 'w-5 h-5'
+            }`}  alt="" />
                 <span className={`${!open && 'hidden'} origin-left duration-200`}>
                   {Menu.title}
                 </span>
