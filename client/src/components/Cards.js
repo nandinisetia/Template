@@ -21,7 +21,7 @@ export default function Services() {
       ];
   return (
     <>
-    <section name="Articles" className=" py-10">
+    <section name="Articles" className="pt-[70px] py-10">
         <h1 className="text-4xl font-bold text-[#424642] font-sans from-neutral-500 text-center">OUR SERVICES</h1>
         <div className="flex justify-center">
         </div>
