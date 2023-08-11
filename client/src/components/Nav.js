@@ -5,6 +5,10 @@ import axios from "axios";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const storedData = JSON.parse(localStorage.getItem("userData"));
+  const [open, setOpen] = useState(false);
+  const toggleDropdown = () => {
+    setOpen(!open);
+  };
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
@@ -41,29 +45,32 @@ export default function Nav() {
             <a href="/" className="text-white mx-4">
               Home
             </a>
-            <a href="/" className="text-white mx-4">
+            <a href='/article' className="text-white mx-4">
               Articles
             </a>
-            <div className="text-white mx-4">
-              Calculators
-              <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+            <div className="relative text-white mx-4">
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" onClick={toggleDropdown} class="flex items-center w-full rounded  focus:text-white hover:bg-transparent">Calculators <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg></button>
+             
+       <div
+        id="dropdown"
+        className={`z-10 ${open ? 'block' : 'hidden'} bg-white divide-y divide-gray-100 rounded-lg shadow w-[200px]  absolute top-full -right-9`}
+      >
+    <ul class="py-2 text-sm text-black" aria-labelledby="dropdownDefaultButton">
       <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+        <a href="/mf" class="block px-4 py-2  hover:bg-[#536162] hover:text-white">Mutual Funds</a>
       </li>
       <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+        <a href="/sip" class="block px-4 py-2  hover:bg-[#536162] hover:text-white">Systematic Investment Plan</a>
       </li>
       <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-      </li>
-      <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+        <a href="/ppf" class="block px-4 py-2  hover:bg-[#536162] hover:text-white">Public Provident Fund</a>
       </li>
     </ul>
 </div>
-            </div>
-            <a href="/" className="text-white mx-4">
+</div>
+            <a href="/about" className="text-white mx-4">
               About
             </a>
           </div>

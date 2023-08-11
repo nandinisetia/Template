@@ -7,17 +7,11 @@ function Nav3() {
         navigate("/login");
       };
   return (
-    <div className='hidden lg:flex fixed flex-col top-[45%] left-0'>
-          <li className='w-[160px] h-[100px] flex justify-between items-center ml-[-100px] hover:ml-[-2px] duration-300 bg-[#637373]'>
-            <a
-              className='flex justify-left items-center w-full text-gray-300'
-              href='https://www.linkedin.com/in/noordeepkaur/'
-              rel="noopener noreferrer" target="_blank"
-            >
-              
-            </a>
-          </li>
-      </div>
+    <div className='hidden lg:flex fixed bottom-[45%] flex-col left-[20px] transform -translate-x-1/2'>
+  <a href='/quiz' className='bg-[#637373] hover:bg-[#4e5d5d] transition duration-300 rounded-lg shadow-md p-4 pb-0.5 text-white font-semibold text-lg transform -rotate-90 flex items-center justify-center'>
+    Click here to take quiz
+  </a>
+</div>
   )
 }
 
