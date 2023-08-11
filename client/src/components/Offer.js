@@ -21,7 +21,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-10">
+    <section name="offer" className=" pt-[70px] py-10">
       <h1 className="text-4xl font-bold text-[#424642] font-sans from-neutral-500 text-center">What do we Offer?</h1>
       <div className="container mx-auto px-10 py-6 flex flex-col items-center">
         {cards.map((card, index) => (
